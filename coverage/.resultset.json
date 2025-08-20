@@ -22,6 +22,29 @@
           null
         ]
       },
+      "/Users/prawit/academy_test/todolist/acade/app/mailers/application_mailer.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/prawit/academy_test/todolist/acade/app/controllers/brag_controller.rb": {
         "lines": [
           1,
@@ -51,29 +74,6 @@
       "/Users/prawit/academy_test/todolist/acade/app/helpers/quests_helper.rb": {
         "lines": [
           1,
-          null
-        ]
-      },
-      "/Users/prawit/academy_test/todolist/acade/app/mailers/application_mailer.rb": {
-        "lines": [
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
           null
         ]
       },
@@ -175,6 +175,6 @@
         ]
       }
     },
-    "timestamp": 1755684938
+    "timestamp": 1755685914
   }
 }

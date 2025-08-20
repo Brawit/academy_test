@@ -1,42 +1,44 @@
-<div class="min-h-screen flex flex-col items-center justify-start w-full max-w-none bg-gradient-to-br from-blue-50 to-indigo-100 py-12">
+<body data-controller="scroll-preserver" data-scroll-preserver-storage-key-value="quests-scroll">
+  <div class="min-h-screen flex flex-col items-center justify-start w-full max-w-none bg-gradient-to-br from-blue-50 to-indigo-100 py-12">
 
-  <!-- Hero Section -->
-  <section class="flex flex-col items-center justify-center text-center">
-    <%= image_tag "profile.jpg", class: "w-56 h-56 rounded-full shadow-2xl border-4 border-white" %>
-    <h1 class="mt-6 text-5xl font-extrabold text-gray-800">My Todo-list</h1>
-    <div class="mt-4">
-      <%= link_to brag_path, class: "inline-block bg-indigo-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-indigo-700 hover:shadow-xl transition duration-300" do %>
-        My Brag Document
-      <% end %>
-    </div>
-  </section>
-
-  <!-- Main content -->
-  <main class="mt-12 flex flex-col items-center w-full max-w-2xl">
-
-    <!-- New quest form -->
-    <div class="w-full mb-10">
-      <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 w-full">
-        <h2 class="text-xl font-semibold text-gray-700 mb-4 text-center">Add a new quest</h2>
-        <%= turbo_frame_tag "new_quest_form" do %>
-          <%= render "form", quest: @quest %>
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center text-center">
+      <%= image_tag "profile.jpg", class: "w-56 h-56 rounded-full shadow-2xl border-4 border-white" %>
+      <h1 class="mt-6 text-5xl font-extrabold text-gray-800">My Todo-list</h1>
+      <div class="mt-4">
+        <%= link_to brag_path, class: "inline-block bg-indigo-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-indigo-700 hover:shadow-xl transition duration-300" do %>
+          My Brag Document
         <% end %>
       </div>
-    </div>
+    </section>
 
-    <!-- Quest list -->
-    <div class="w-full">
-      <h2 class="text-lg font-semibold text-gray-700 mb-4 text-center">Your Quests</h2>
-      <%= turbo_frame_tag "quests", id: "quests" do %>
-        <div class="space-y-3">
-          <%= render partial: "quest", collection: @quests, as: :quest %>
+    <!-- Main content -->
+    <main class="mt-12 flex flex-col items-center w-full max-w-2xl">
+
+      <!-- New quest form -->
+      <div class="w-full mb-10">
+        <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 w-full">
+          <h2 class="text-xl font-semibold text-gray-700 mb-4 text-center">Add a new quest</h2>
+          <%= turbo_frame_tag "new_quest_form" do %>
+            <%= render "form", quest: @quest %>
+          <% end %>
         </div>
-      <% end %>
-    </div> 
-  </main>
+      </div>
 
-  <!-- Footer -->
-  <footer class="w-full text-center py-4 text-sm text-gray-500 mt-12">
-    © <%= Time.current.year %> My Todo-list. All rights reserved.
-  </footer>
-</div>
+      <!-- Quest list -->
+      <div class="w-full">
+        <h2 class="text-lg font-semibold text-gray-700 mb-4 text-center">Your Quests</h2>
+        <%= turbo_frame_tag "quests", id: "quests" do %>
+          <div class="space-y-3">
+            <%= render partial: "quest", collection: @quests, as: :quest %>
+          </div>
+        <% end %>
+      </div> 
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-4 text-sm text-gray-500 mt-12">
+      © <%= Time.current.year %> My Todo-list. All rights reserved.
+    </footer>
+  </div>
+</body>
