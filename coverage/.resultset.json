@@ -1,6 +1,82 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/prawit/academy_test/todolist/acade/app/jobs/example_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/prawit/academy_test/todolist/acade/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/prawit/academy_test/todolist/acade/app/controllers/brag_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/prawit/academy_test/todolist/acade/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/prawit/academy_test/todolist/acade/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/prawit/academy_test/todolist/acade/app/helpers/brag_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/prawit/academy_test/todolist/acade/app/helpers/quests_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/prawit/academy_test/todolist/acade/app/mailers/application_mailer.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/prawit/academy_test/todolist/acade/app/models/quest.rb": {
         "lines": [
           1,
@@ -89,7 +165,7 @@
           1,
           null,
           1,
-          9,
+          8,
           null,
           null,
           1,
@@ -97,84 +173,8 @@
           null,
           null
         ]
-      },
-      "/Users/prawit/academy_test/todolist/acade/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/prawit/academy_test/todolist/acade/app/helpers/application_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/prawit/academy_test/todolist/acade/app/helpers/brag_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/prawit/academy_test/todolist/acade/app/helpers/quests_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/prawit/academy_test/todolist/acade/app/jobs/example_job.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/prawit/academy_test/todolist/acade/app/jobs/application_job.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/prawit/academy_test/todolist/acade/app/mailers/application_mailer.rb": {
-        "lines": [
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/prawit/academy_test/todolist/acade/app/controllers/brag_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1755683436
+    "timestamp": 1755684938
   }
 }
