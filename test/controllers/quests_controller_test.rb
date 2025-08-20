@@ -4,8 +4,10 @@ class QuestsControllerTest < ActionDispatch::IntegrationTest
   include Rails::Controller::Testing::TestProcess
   include Rails::Controller::Testing::TemplateAssertions
   include Rails::Controller::Testing::Integration
+
   setup do
-    @quest = quests(:one)
+    # สร้าง quest ใหม่เอง แทน fixtures
+    @quest = Quest.create!(name: "Existing Quest")
   end
 
   # GET /quests
