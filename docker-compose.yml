@@ -1,15 +1,27 @@
 services:
-    db:
-        image: postgres:17.4-alpine
-        restart: always
-        environment:
-            POSTGRES_USER: ${DB_USERNAME}
-            POSTGRES_PASSWORD: ${DB_PASSWORD}
-            POSTGRES_DB: ${DB_NAME}
-        ports:
-            - 5432:5432
-        volumes:
-            - rails-data:/var/lib/postgresql/data
+  db:
+    image: postgres:17.4-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_DB: acade_development
+    ports:
+      - "5432:5432"
+    volumes:
+      - rails-data:/var/lib/postgresql/data
 
 volumes:
-    rails-data:
+  rails-data:
+
+app: 
+    build: .
+    container_name: academy-quest-boss-lepan-app
+    command: bundle exec rails s
+    environment:
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
+      DATABASE_URL: ${DATABASE_URL_PRODUCTION}
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000 
