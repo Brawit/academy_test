@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :quests
+  resources :quests, only: [ :index, :show, :create, :update, :destroy ]
   get "up" => "rails/health#show", as: :rails_health_check
   get "/brag" => "brag#index", as: :brag
 

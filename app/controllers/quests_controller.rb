@@ -3,17 +3,15 @@ class QuestsController < ApplicationController
 
   # GET /quests
   def index
-    @quests = Quest.all
+    @quests = Quest.order(created_at: :desc)
     @quest = Quest.new
+  end
+
+  def new
   end
 
   # GET /quests/1
   def show
-  end
-
-  # GET /quests/new
-  def new
-    @quest = Quest.new
   end
 
   # GET /quests/1/edit
@@ -30,10 +28,9 @@ class QuestsController < ApplicationController
         format.json { render json: @quest, status: :created }
         format.turbo_stream
       else
-        format.html { render :new, status: :unprocessable_content }
+        format.html { render :index, status: :unprocessable_content }
         format.json { render json: @quest.errors, status: :unprocessable_content }
         format.turbo_stream do
-          # แทนที่จะ render partial ของ quest ที่ล้มเหลว
           render turbo_stream: turbo_stream.replace(
             "new_quest_form",
             partial: "quests/form",
@@ -43,8 +40,6 @@ class QuestsController < ApplicationController
       end
     end
   end
-
-
 
   # PATCH/PUT /quests/1
   def update
@@ -60,7 +55,6 @@ class QuestsController < ApplicationController
       end
     end
   end
-
 
   # DELETE /quests/1
   def destroy

@@ -21,9 +21,9 @@ class QuestsControllerTest < ActionDispatch::IntegrationTest
   # GET /quests/new
   test "should get new and assign quest" do
     get new_quest_url
-    assert_response :success
-    assert_not_nil assigns(:quest)
+    assert_redirected_to quests_url
   end
+
 
   # GET /quests/:id
   test "should show quest" do
