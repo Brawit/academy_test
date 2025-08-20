@@ -1,9 +1,8 @@
-<%= turbo_frame_tag dom_id(quest), data: { controller: "scroll", scroll_target_id_value: dom_id(quest) } do %>
+<%= turbo_frame_tag dom_id(quest) do %>
   <div class="flex items-start justify-between bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-200">
     
     <!-- Checkbox + Text -->
     <div class="flex items-start space-x-4 w-full">
-      <!-- Checkbox -->
       <%= form_with model: quest, method: :patch, local: false, class: "flex-shrink-0" do |f| %>
         <%= f.check_box :is_done,
               checked: quest.is_done,
@@ -11,13 +10,11 @@
               data: { controller: "checkbox", action: "change->checkbox#submit" } %>
       <% end %>
 
-      <!-- Quest name -->
       <div class="flex-1">
         <span class="<%= quest.is_done ? 'line-through text-gray-400 break-words break-all whitespace-pre-wrap' : 'text-gray-800 break-words break-all whitespace-pre-wrap' %> font-medium"><%= quest.name.strip %></span>
       </div>
     </div>
 
-    <!-- Delete button -->
     <%= link_to quest_path(quest),
           data: { turbo_method: :delete },
           class: "text-red-500 hover:text-red-700 font-semibold ml-4" do %>
