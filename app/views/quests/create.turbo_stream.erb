@@ -1,4 +1,15 @@
 <%= turbo_stream.append "quests" do %>
   <%= render partial: "quest", locals: { quest: @quest } %>
 <% end %>
-<%= turbo_stream.replace "new_quest_form", partial: "form", locals: { quest: Quest.new } %>
+
+<%= turbo_stream.replace "new_quest_form" do %>
+  <%= render "form", quest: Quest.new %>
+<% end %>
+
+<%= turbo_stream.append "quests" do %>
+  <script>
+    document.dispatchEvent(new CustomEvent("quest:created", {
+      detail: { id: "<%= dom_id(@quest) %>" }
+    }));
+  </script>
+<% end %>
